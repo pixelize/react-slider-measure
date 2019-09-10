@@ -34,9 +34,10 @@ const Tick = styled.div`
   }
 `;
 
-const Container = styled.div`
+const Container = styled.div<{ containerStyles: any; }>`
   display: flex;
   position: relative;
+  ${p => p.containerStyles};
 `;
 
 const Item = styled.div`

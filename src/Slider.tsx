@@ -43,7 +43,7 @@ export const Slider = ({
   steps,
   value = 1,
   onChange,
-  activeColor
+  activeColor,
 }: {
   steps?: number;
   value?: number;

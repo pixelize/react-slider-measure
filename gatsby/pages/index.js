@@ -58,7 +58,8 @@ const Copyright = styled.div`
 `;
 
 export default () => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(1);
+
   return (
     <>
       <GlobalStyle />
