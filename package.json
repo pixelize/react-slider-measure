@@ -1,0 +1,73 @@
+{
+  "name": "react-slider-measure",
+  "version": "1.0.0",
+  "description": "react-slider-measure is a customizable, pure JavaScript package, that provides a smooth user interface for picking a value within a measure styled bar",
+  "main": "./lib/index.js",
+  "module": "./dist/react-slider-measure.es.js",
+  "types": "./lib/index.d.ts",
+  "unpkg": "./dist/react-slider-measure.js",
+  "scripts": {
+    "build": "rollup -c && yarn measure",
+    "watch": "rollup -c -w",
+    "test": "jest --maxWorkers=2",
+    "lint": "tslint 'src/**/*.{ts,tsx}' -e '**/_tests/**'",
+    "measure": "gzip -c dist/react-slider-measure.js | wc -c",
+    "prettier": "prettier ./src/* --write",
+    "prepublishOnly": "yarn prettier && yarn lint && yarn build",
+    "start": "concurrently 'gatsby develop' 'yarn watch'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pixelize/react-slider-measure"
+  },
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "keywords": [
+    "animation",
+    "dom",
+    "declarative",
+    "popmotion",
+    "react",
+    "react animation"
+  ],
+  "author": "Matt Perry",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "@types/styled-components": "^4.1.19",
+    "concurrently": "^4.1.2",
+    "gatsby": "^2.15.14",
+    "jest": "^24.9.0",
+    "jest-cli": "^24.9.0",
+    "prettier": "^1.18.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-testing-library": "^8.0.1",
+    "rollup": "^1.21.2",
+    "rollup-plugin-auto-external": "^2.0.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-typescript2": "^0.24.1",
+    "rollup-plugin-uglify": "^6.0.3",
+    "typescript": "^3.6.2",
+    "uglify": "^0.1.5"
+  },
+  "dependencies": {
+    "@rehooks/component-size": "^1.0.3",
+    "react-spring": "^8.0.27",
+    "react-use-gesture": "^5.2.4",
+    "styled-components": "^4.3.2"
+  },
+  "prettier": {
+    "parser": "typescript"
+  }
+}
