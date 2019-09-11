@@ -13,7 +13,8 @@
     "measure": "gzip -c dist/react-slider-measure.js | wc -c",
     "prettier": "prettier ./src/* --write",
     "start": "concurrently 'gatsby develop' 'yarn watch'",
-    "prepare": "yarn build"
+    "prepare": "yarn build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",
@@ -44,6 +45,7 @@
     "@types/styled-components": "^4.1.19",
     "concurrently": "^4.1.2",
     "gatsby": "^2.15.14",
+    "gh-pages": "^2.1.1",
     "jest": "^24.9.0",
     "jest-cli": "^24.9.0",
     "prettier": "^1.18.2",
