@@ -9,7 +9,7 @@
 
 [Github page](https://pixelize.github.io/react-slider-measure)
 
-Also: see example folder. You can run it locally using [Gatsby](https://www.gatsbyjs.org/) just clone the repos and use `yarn start` in your CLI.
+Also: see gatsby/pages folder. You can run it locally using [Gatsby](https://www.gatsbyjs.org/) just clone the repos and use `yarn start` in your CLI.
 
 ## Installation
 
