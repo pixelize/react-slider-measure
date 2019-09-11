@@ -45,7 +45,6 @@ const App = () => {
 | --------------------------- | -------------- | ----------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | steps              | string         | true       | 40                                                                                                     | Defines the total numbers on the slider                                                      |
 | value            | number        | true       |               -                                                                                        | Slider current value                                                                    |
-| containerStyles             | style (object) | false       | -                                                                                                       | Styles applied to whole container                                                                                   |
 | onChange                | function         | true       | -                                                                                                       | Retrieve the selected value from the slider                                                                       |
 | activeColor | string | false       | #5a2cc9 | Active color for the selected value
 
