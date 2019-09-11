@@ -10,11 +10,10 @@
     "build": "rollup -c && yarn measure",
     "watch": "rollup -c -w",
     "test": "jest --maxWorkers=2",
-    "lint": "tslint 'src/**/*.{ts,tsx}' -e '**/_tests/**'",
     "measure": "gzip -c dist/react-slider-measure.js | wc -c",
     "prettier": "prettier ./src/* --write",
-    "prepublishOnly": "yarn prettier && yarn lint && yarn build",
-    "start": "concurrently 'gatsby develop' 'yarn watch'"
+    "start": "concurrently 'gatsby develop' 'yarn watch'",
+    "prepare": "yarn build"
   },
   "repository": {
     "type": "git",
