@@ -1,4 +1,3 @@
-﻿
 # react-slider-measure
 
 ## Description
