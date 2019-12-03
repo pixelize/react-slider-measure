@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components"
+import styled from "styled-components";
 import { colors } from "./lib/constants";
 
 const tickStyles = `
@@ -60,7 +60,12 @@ const Item = styled.div`
   }
 `;
 
-interface IMeasureProps { steps: number; value: number; onClick: (index: number) => void; activeColor?: string; }
+interface IMeasureProps {
+  steps: number;
+  value: number;
+  onClick: (index: number) => void;
+  activeColor?: string;
+}
 
 export const Measure = React.forwardRef<HTMLDivElement, IMeasureProps>(
   ({ steps, value, onClick, activeColor }: IMeasureProps, ref) => {
@@ -75,7 +80,10 @@ export const Measure = React.forwardRef<HTMLDivElement, IMeasureProps>(
                 style={{
                   cursor: "pointer",
                   transition: "all .2s",
-                  color: value === i + 1 ? activeColor || colors.active : colors.grey,
+                  color:
+                    value === i + 1
+                      ? activeColor || colors.active
+                      : colors.grey,
                   transform:
                     value === i + 1
                       ? "scale(1.3) translateY(-3px)"
@@ -89,5 +97,5 @@ export const Measure = React.forwardRef<HTMLDivElement, IMeasureProps>(
           ))}
       </Container>
     );
-  },
+  }
 );
