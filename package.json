@@ -2,28 +2,24 @@
   "name": "react-slider-measure",
   "version": "0.0.0",
   "description": "react-slider-measure is a customizable, pure JavaScript package, that provides a smooth user interface for picking a value within a measure styled bar",
-  "main": "./lib/index.js",
-  "module": "./dist/react-slider-measure.es.js",
-  "types": "./lib/index.d.ts",
-  "unpkg": "./dist/react-slider-measure.js",
+  "main": "dist/index.js",
+  "module": "dist/react-slider-measure.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "rollup -c && yarn measure",
-    "watch": "rollup -c -w",
-    "test": "jest --maxWorkers=2",
-    "lint": "tslint 'src/**/*.{ts,tsx}' -e '**/_tests/**'",
-    "measure": "gzip -c dist/react-slider-measure.js | wc -c",
-    "prettier": "prettier ./src/* --write",
-    "prepublishOnly": "yarn prettier && yarn lint && yarn build",
-    "start": "concurrently 'gatsby develop' 'yarn watch'"
+    "start": "concurrently 'gatsby develop' 'yarn watch'",
+    "watch": "tsdx watch",
+    "build": "tsdx build",
+    "lint": "tsdx lint",
+    "test": "tsdx test",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/pixelize/react-slider-measure"
   },
-  "files": [
-    "dist",
-    "lib"
-  ],
   "keywords": [
     "animation",
     "dom",
@@ -32,42 +28,39 @@
     "react",
     "react animation"
   ],
-  "author": "Matt Perry",
+  "author": "Gauthier Eloy",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^4.4.1"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.18",
-    "@types/react": "^16.9.2",
-    "@types/react-dom": "^16.9.0",
-    "@types/styled-components": "^4.1.19",
-    "concurrently": "^4.1.2",
-    "gatsby": "^2.15.14",
+    "@types/jest": "^24.0.23",
+    "@types/react": "^16.9.14",
+    "@types/react-dom": "^16.9.4",
+    "@types/styled-components": "^4.4.0",
+    "concurrently": "^5.0.0",
+    "gatsby": "^2.18.6",
     "jest": "^24.9.0",
     "jest-cli": "^24.9.0",
-    "prettier": "^1.18.2",
+    "prettier": "^1.19.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-testing-library": "^8.0.1",
-    "rollup": "^1.21.2",
-    "rollup-plugin-auto-external": "^2.0.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-replace": "^2.2.0",
-    "rollup-plugin-typescript2": "^0.24.1",
-    "rollup-plugin-uglify": "^6.0.3",
-    "typescript": "^3.6.2",
+    "tsdx": "^0.11.0",
+    "typescript": "^3.7.2",
     "uglify": "^0.1.5"
   },
   "dependencies": {
     "@rehooks/component-size": "^1.0.3",
     "react-spring": "^8.0.27",
-    "react-use-gesture": "^5.2.4",
-    "styled-components": "^4.3.2"
+    "react-use-gesture": "^6.0.14"
   },
   "prettier": {
-    "parser": "typescript"
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": false,
+    "trailingComma": "es5"
   }
 }

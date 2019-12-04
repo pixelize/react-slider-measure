@@ -2,7 +2,7 @@ import useComponentSize from "@rehooks/component-size";
 import React, { useEffect, useRef } from "react";
 import { animated, useSpring } from "react-spring";
 import { useDrag } from "react-use-gesture";
-import styled from "styled-components"
+import styled from "styled-components";
 import { Measure } from "./Measure";
 import { colors } from "./lib/constants";
 
@@ -23,10 +23,10 @@ const SliderContainer = styled.div`
     right: 0;
     z-index: 100;
   }
-`
+`;
 
-const Bar = styled.div<{ activeColor: string; }>`
-  background: ${p => p.activeColor ? p.activeColor : colors.active};
+const Bar = styled.div<{ activeColor: string }>`
+  background: ${p => (p.activeColor ? p.activeColor : colors.active)};
   border-radius: 99px;
   bottom: 0;
   height: 30px;
@@ -34,7 +34,7 @@ const Bar = styled.div<{ activeColor: string; }>`
   position: absolute;
   width: 2px;
   z-index: 99;
-`
+`;
 
 const interpolateTransform: any = (x: number, y: number) =>
   `translate3D(${x}px, ${y}px, 0)`;
@@ -61,7 +61,7 @@ export const Slider = ({
 
     if (!down) {
       x = Math.min(0, Math.max(-1 * width, x));
-      const newValue = Math.max(Math.round(x / stepWidth), ((steps - 1) * -1))
+      const newValue = Math.max(Math.round(x / stepWidth), (steps - 1) * -1);
       x = newValue * stepWidth;
       onChange(newValue * -1 + 1);
     }
@@ -75,7 +75,7 @@ export const Slider = ({
     if (width) {
       set({ xy: [(value - 1) * stepWidth * -1, 0] });
     }
-  }, [width, value]);
+  }, [width, value, set, stepWidth]);
 
   return (
     <SliderContainer {...bind()}>
@@ -91,7 +91,13 @@ export const Slider = ({
           marginTop: "auto",
         }}
       >
-        <Measure activeColor={activeColor} value={value} steps={steps} onClick={onChange} ref={ref} />
+        <Measure
+          activeColor={activeColor}
+          value={value}
+          steps={steps}
+          onClick={onChange}
+          ref={ref}
+        />
       </animated.div>
       <Bar activeColor={activeColor} />
     </SliderContainer>
