@@ -14,7 +14,8 @@
     "build": "tsdx build",
     "lint": "tsdx lint",
     "test": "tsdx test",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "now-build": "gatsby build"
   },
   "repository": {
     "type": "git",
