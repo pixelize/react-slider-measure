@@ -6,7 +6,7 @@
 
 ### Demo
 
-[Github page](github.com/pixelize)
+[Demo](https://react-slider-measure.now.sh/)
 
 Also: see gatsby/pages folder. You can run it locally using [Gatsby](https://www.gatsbyjs.org/) just clone the repos and use `yarn start` in your CLI.
 

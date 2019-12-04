@@ -1,4 +1,6 @@
 /dist
 /.rts2_cache_cjs
 /.rts2_cache_esm
+/.cache
+/public
 /node_modules

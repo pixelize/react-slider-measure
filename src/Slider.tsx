@@ -56,8 +56,8 @@ export const Slider = ({
   const [{ xy }, set] = useSpring(() => ({
     xy: [0, 0],
   }));
-  const bind = useDrag(({ down, delta, memo = xy.getValue() }) => {
-    let x = delta[0] + memo[0];
+  const bind = useDrag(({ down, movement, memo = xy.getValue() }) => {
+    let x = movement[0] + memo[0];
 
     if (!down) {
       x = Math.min(0, Math.max(-1 * width, x));
