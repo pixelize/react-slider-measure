@@ -1,6 +1,6 @@
 {
   "name": "react-slider-measure",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "react-slider-measure is a customizable, pure JavaScript package, that provides a smooth user interface for picking a value within a measure styled bar",
   "main": "dist/index.js",
   "module": "dist/react-slider-measure.esm.js",
